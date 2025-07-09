@@ -1,7 +1,10 @@
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        n=len(nums)
-        summation=(n*(n+1))//2
-        s=sum(nums)
-        ans=summation-s
-        return ans 
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        for i in range(len(nums)+1):
+            if i not in nums:
+                return i
+        return
