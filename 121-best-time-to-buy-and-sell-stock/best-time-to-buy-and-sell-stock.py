@@ -4,8 +4,6 @@ class Solution:
         minPrice =prices[0]
         for i in range(len(prices)):
             minPrice = min(minPrice, prices[i])
-            maxPro = max(maxPro, prices[i] - minPrice)
-        return maxPro
-
-
-         
+            profit=prices[i] - minPrice
+            maxPro = max(maxPro,profit)
+        return maxPro     
