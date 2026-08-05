@@ -11,7 +11,7 @@ var rearrangeArray = function(nums) {
             res[pos_idx]=nums[i];
             pos_idx+=2;
         }
-        else if(nums[i]<0){
+        else{
             res[neg_idx]=nums[i];
             neg_idx+=2;
         }
