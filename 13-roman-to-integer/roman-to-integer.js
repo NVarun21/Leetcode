@@ -14,7 +14,9 @@ var romanToInt = function(s) {
     };
     let result=0;
     for(let i=0;i<s.length;i++){
-        if(i+1<s.length && roman_map[s[i]]<roman_map[s[i+1]]){
+        let curr_value=roman_map[s[i]];
+        let next_value=roman_map[s[i+1]];
+        if(curr_value<next_value){
             result-=roman_map[s[i]];
         }
         else{
