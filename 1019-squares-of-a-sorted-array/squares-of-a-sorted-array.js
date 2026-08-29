@@ -8,5 +8,15 @@ var sortedSquares = function(nums) {
         let sq=nums[i]**2;
         arr[i]=sq;
     }
-    return arr.sort((s,b)=>s-b);
+    
+    for(let i=0;i<nums.length;i++){
+        for(let j=0;j<nums.length-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                let temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    return arr;
 };
