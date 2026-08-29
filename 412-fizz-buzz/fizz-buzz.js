@@ -6,16 +6,16 @@ var fizzBuzz = function(n) {
     let ans=[];
     for(let i=1;i<=n;i++){
         if(i%3==0 && i%5==0){
-            ans.push("FizzBuzz");
+            ans[i-1]="FizzBuzz";
         }
         else if(i%3==0){
-            ans.push("Fizz");
+            ans[i-1]="Fizz";
         }
         else if(i%5==0){
-            ans.push("Buzz");
+            ans[i-1]="Buzz";
         }
         else{
-            ans.push(`${i}`);
+            ans[i-1]=`${i}`;
         }
     }
     return ans
