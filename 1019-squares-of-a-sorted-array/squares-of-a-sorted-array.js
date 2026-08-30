@@ -28,12 +28,14 @@ var sortedSquares = function(nums) {
     let ans = [];
 
     for(let i=nums.length-1;i>=0;i--){
-        if(nums[left]*nums[left]>nums[right]*nums[right]){
-            ans[i]=nums[left]*nums[left];
+        const leftsquare=nums[left]*nums[left];
+        const rightsquare=nums[right]*nums[right];
+        if(leftsquare>rightsquare){
+            ans[i]=leftsquare;
             left++;
         }
         else{
-            ans[i]=nums[right]*nums[right];
+            ans[i]=rightsquare;
             right--;
         }
     }
