@@ -17,10 +17,10 @@ var romanToInt = function(s) {
         let curr_value=roman_map[s[i]];
         let next_value=roman_map[s[i+1]];
         if(curr_value<next_value){
-            result-=roman_map[s[i]];
+            result-=curr_value;
         }
         else{
-            result+=roman_map[s[i]];
+            result+=curr_value;
         }
     }
     return result;
