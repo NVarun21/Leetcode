@@ -12,12 +12,29 @@ var twoSum = function(nums, target) {
     //     }
     // }
 
-    let map=new Map();
+    // let map=new Map();
+    // for(let i=0;i<nums.length;i++){
+    //     let required=target-nums[i];
+    //     if(required in map){
+    //         return [i,map[required]];
+    //     }
+    //     map[nums[i]]=i;
+    // }
+
+    let freq=new Map();
     for(let i=0;i<nums.length;i++){
         let required=target-nums[i];
-        if(required in map){
-            return [i,map[required]];
+        if(required in freq){
+            return [i,freq[required]]
         }
-        map[nums[i]]=i;
+        freq[nums[i]]=i;
     }
+
+
+
+
+
+
+
+
 };
