@@ -25,7 +25,7 @@ var twoSum = function(nums, target) {
     for(let i=0;i<nums.length;i++){
         let required=target-nums[i];
         if(required in freq){
-            return [i,freq[required]]
+            return [freq[required],i]
         }
         freq[nums[i]]=i;
     }
